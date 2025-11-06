@@ -68,3 +68,29 @@ export const PATCH = async (req, { params }) => {
     { status: 200 }
   );
 };
+
+export const DELETE = async (_req, { params }) => {
+  const articleIdToDelete = params.id;
+
+  const found = data.find(
+    (article) => article.article_id === articleIdToDelete
+  );
+
+  if (!found) {
+    return NextResponse.json(
+      new ApiError(404, `Article with id: '${idToDelete}' not found`),
+      { status: 404 }
+    );
+  }
+
+  data.filter((article) => article.article_id !== articleIdToDelete);
+
+  return NextResponse.json(
+    new ApiResponse(
+      200,
+      `Article deleted. DeletedId: ${articleIdToDelete}`,
+      found
+    ),
+    { status: 200 }
+  );
+};
