@@ -1,6 +1,8 @@
 import { getDictionary } from "@/app/[lang]/dictionaries/dictionary";
 import { getAllArticle } from "@/data/data";
+import { Suspense } from "react";
 import Article from "./Article";
+import ArticleCardSkeleton from "./skeletons/ArticleCardSkeleton";
 
 const ArticleList = async ({ locale }) => {
   const articles = await getAllArticle();
@@ -12,7 +14,9 @@ const ArticleList = async ({ locale }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article) => (
-          <Article key={article.article_id} article={article} locale={locale} />
+          <Suspense key={article.article_id} fallback={<ArticleCardSkeleton />}>
+            <Article article={article} locale={locale} />
+          </Suspense>
         ))}
       </div>
     </section>

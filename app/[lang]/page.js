@@ -10,9 +10,7 @@ export default function Home({ params: { lang } }) {
         <FeaturedStory locale={lang} />
       </Suspense>
 
-      <Suspense fallback={<h2>Loading...</h2>}>
-        <ArticleList locale={lang} />
-      </Suspense>
+      <ArticleList locale={lang} />
     </div>
   );
 }
