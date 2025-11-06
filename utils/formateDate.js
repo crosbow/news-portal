@@ -1,4 +1,4 @@
-export const formateDate = (dateString) => {
+export const formateDate = (dateString, locale) => {
   const date = new Date(dateString);
   const today = new Date();
 
@@ -23,16 +23,20 @@ export const formateDate = (dateString) => {
   }
 
   if (month) {
-    return `${month} mon, ${day} day ${hour} hours ago`;
+    return locale == "en"
+      ? `${month} mon, ${day} day ${hour} hours ago`
+      : `${month} মাস, ${day} দিন ${hour} ঘন্টা আগে`;
   } else if (day) {
-    return `${day} day, ${hour} hours ago`;
+    return locale == en
+      ? `${day} day, ${hour} hours ago`
+      : `${day} দিন ${hour} ঘন্টা আগে`;
   }
 };
 
-export const getDate = (dateString) => {
+export const getDate = (dateString, loc) => {
   const date = new Date(dateString);
 
-  const months = [
+  const engMonths = [
     "January",
     "February",
     "March",
@@ -47,8 +51,24 @@ export const getDate = (dateString) => {
     "December",
   ];
 
+  const bangMonths = [
+    "জানুয়ারী",
+    "ফেব্রুয়ারী",
+    "মার্চ",
+    "এপ্রিল",
+    "মে",
+    "জুন",
+    "জুলাই",
+    "আগস্ট",
+    "সেপ্টেম্বর",
+    "অক্টোবর",
+    "নভেম্বর",
+    "ডিসেম্বর",
+  ];
+
   const year = date.getFullYear();
-  const month = months[date.getMonth()];
+  const month =
+    loc == "en" ? engMonths[date.getMonth()] : bangMonths[date.getMonth()];
   const day = date.getDate();
   const locale = new Intl.DateTimeFormat().resolvedOptions().locale;
 

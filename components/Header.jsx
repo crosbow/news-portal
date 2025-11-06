@@ -1,7 +1,11 @@
+import { getDictionary } from "@/app/[lang]/dictionaries/dictionary";
 import Link from "next/link";
 import Logo from "./Logo";
 
-const Header = () => {
+const Header = async ({ locale }) => {
+  const dict = await getDictionary(locale);
+
+  const { world, lifestyle, business } = dict.header;
   return (
     <header className="bg-zinc-800 border-b border-gray-700 px-4 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -38,19 +42,19 @@ const Header = () => {
               href="#"
               className="text-sm hover:text-gray-600 transition-colors"
             >
-              World
+              {world}
             </Link>
             <Link
               href="#"
               className="text-sm hover:text-gray-600 transition-colors"
             >
-              Business
+              {business}
             </Link>
             <Link
               href="#"
               className="text-sm hover:text-gray-600 transition-colors"
             >
-              Lifestyle
+              {lifestyle}
             </Link>
 
             <div className="flex items-center space-x-2 text-sm">

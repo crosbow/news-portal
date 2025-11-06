@@ -1,24 +1,26 @@
+import { getDictionary } from "@/app/[lang]/dictionaries/dictionary";
 import { getSingleArticle } from "@/data/data";
 import extractImage from "@/utils/extractImage";
+import { formateDate } from "@/utils/formateDate";
 import Image from "next/image";
+import Link from "next/link";
 
 const ID = "248f550e46e14e8367be435aefae1ff4";
 
-const FeaturedStory = async () => {
+const FeaturedStory = async ({ locale }) => {
   const {
     title,
     author: authorName,
     description,
     content,
     image_url,
-    category,
     pubDate,
     avatar,
-    comments,
   } = await getSingleArticle(ID);
 
   const extractedImageUrl = await extractImage(image_url);
 
+  const dict = await getDictionary(locale);
   return (
     <section className="mb-12">
       <article className="bg-zinc-950 rounded-lg shadow-sm overflow-hidden news-card">
@@ -26,13 +28,16 @@ const FeaturedStory = async () => {
           <div className="order-2 lg:order-1 p-8">
             <div className="flex items-center space-x-4 mb-4">
               <span className="px-3 py-1 bg-zinc-800 text-white text-xs rounded-full">
-                Featured
+                {dict.featured}
               </span>
-              <span className="text-sm text-gray-200">5 min read</span>
+              <span className="text-sm text-gray-200">5 {dict.minRead}</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-normal leading-tight mb-4">
+            <Link
+              href={`/news/${ID}`}
+              className="text-xl font-medium mb-3 leading-tight hover:underline"
+            >
               {title}
-            </h2>
+            </Link>
             <p className="text-gray-200 mb-6 leading-relaxed">{description}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
@@ -41,15 +46,17 @@ const FeaturedStory = async () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium">{authorName}</p>
-                  <p className="text-xs text-gray-300">2 hours ago</p>
+                  <p className="text-xs text-gray-300">
+                    {formateDate(pubDate, locale)}
+                  </p>
                 </div>
               </div>
-              <a
-                href="#"
+              <Link
+                href={`/news/${ID}`}
                 className="text-sm hover:text-gray-600 transition-colors"
               >
-                Read more →
-              </a>
+                {dict.readMore} →
+              </Link>
             </div>
           </div>
           <div className="order-1 lg:order-2">

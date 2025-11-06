@@ -8,18 +8,22 @@ export const metadata = {
   description: "Keep with us to get latest news",
 };
 
-export default function RootLayout({ children, articleModal }) {
+export default function RootLayout({
+  children,
+  articleModal,
+  params: { lang },
+}) {
   return (
     <html lang="en">
       <body className="bg-zinc-900 text-white">
-        <Header />
-        <MarqueeBanner />
+        <Header locale={lang} />
+        <MarqueeBanner locale={lang} />
 
         {articleModal}
 
         <main className="max-w-7xl mx-auto px-4 py-8">{children}</main>
 
-        <Footer />
+        <Footer locale={lang} />
       </body>
     </html>
   );

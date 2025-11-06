@@ -3,20 +3,16 @@ import FeaturedStory from "@/components/FeaturedStory";
 import FeaturedStorySkeleton from "@/components/skeletons/FeaturedStorySkeleton";
 import { Suspense } from "react";
 
-export default function Home() {
+export default function Home({ params: { lang } }) {
   return (
     <div>
       <Suspense fallback={<FeaturedStorySkeleton />}>
-        <FeaturedStory />
+        <FeaturedStory locale={lang} />
       </Suspense>
 
-      <section>
-        <h2 className="text-2xl font-bold mb-8">Latest Stories</h2>
-
-        <Suspense fallback={<h2>Loading...</h2>}>
-          <ArticleList />
-        </Suspense>
-      </section>
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <ArticleList locale={lang} />
+      </Suspense>
     </div>
   );
 }

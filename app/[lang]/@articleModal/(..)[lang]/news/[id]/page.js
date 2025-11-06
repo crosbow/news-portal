@@ -8,7 +8,7 @@ const ArticleModal = async ({ params }) => {
   return (
     <Modal>
       <div className="">
-        <ArticleDetails article={article} />
+        <ArticleDetails article={article} locale={params.lang} />
       </div>
     </Modal>
   );

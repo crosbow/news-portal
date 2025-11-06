@@ -1,0 +1,24 @@
+{
+  "header": {
+    "world": "World",
+    "business": "Business",
+    "lifestyle": "Lifestyle"
+  },
+  "marqueeText": "Breaking News → Climate Summit Reaches Historic Agreement. Tech Giants Announce AI Safety Protocols. Global Markets Show Strong Recovery Signs.",
+  "footer": {
+    "date": "2025",
+    "brand": "Learn with Sumit",
+    "right": "All rights reserved"
+  },
+
+  "article": {
+    "share": "Share",
+    "bookmark": "Bookmark"
+  },
+  "featured": "Featured",
+  "readMore": "Read more",
+  "joinDiscussion": "Join the discussion",
+  "category": "Category",
+  "latestStories": "Latest Stories",
+  "minRead": "min read"
+}

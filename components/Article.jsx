@@ -1,10 +1,11 @@
+import { getDictionary } from "@/app/[lang]/dictionaries/dictionary";
 import extractImage from "@/utils/extractImage";
 import { formateDate } from "@/utils/formateDate";
 import { trancate } from "@/utils/trancate";
 import Image from "next/image";
 import Link from "next/link";
 
-const Article = async ({ article }) => {
+const Article = async ({ article, locale }) => {
   const {
     article_id,
     title,
@@ -18,6 +19,7 @@ const Article = async ({ article }) => {
 
   const extractedImageUrl = await extractImage(image_url);
 
+  const dict = await getDictionary(locale);
   return (
     <article className="bg-zinc-950 rounded-lg shadow-sm overflow-hidden news-card">
       <Link href={`/news/${article_id}`}>
@@ -34,7 +36,7 @@ const Article = async ({ article }) => {
           <span className="text-xs text-black bg-gray-100 px-2 py-1 rounded">
             {category}
           </span>
-          <span className="text-xs text-gray-300">3 min read</span>
+          <span className="text-xs text-gray-300">3 {dict.minRead}</span>
         </div>
         <Link
           href={`/news/${article_id}`}
@@ -52,7 +54,9 @@ const Article = async ({ article }) => {
             </div>
             <span className="text-xs text-gray-300">{authorName}</span>
           </div>
-          <span className="text-xs text-gray-100">{formateDate(pubDate)}</span>
+          <span className="text-xs text-gray-100">
+            {formateDate(pubDate, locale)}
+          </span>
         </div>
       </div>
     </article>
