@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The News Island | Assignment 7</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+</head>
+
+<body class="bg-gray-50 text-black overflow-clip">
+    <!-- Header/Navbar -->
+    <header class="bg-white border-b border-gray-200 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Left section with play button and navigation -->
+            <div class="flex gap-2 items-center">
+                <a href="./index.html" class="flex items-center">
+                    <img src="./assets/logo.png" alt="Logo" class="w-8 h-8 inline-block mr-2">
+                    <h1 class="text-xl font-bold tracking-wider">The News Island</h1>
+                </a>
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <!-- Subscriber Button : Students don't have to do anything with it -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-podcast-icon lucide-podcast">
+                            <path d="M16.85 18.58a9 9 0 1 0-9.7 0" />
+                            <path d="M8 14a5 5 0 1 1 8 0" />
+                            <circle cx="12" cy="11" r="1" />
+                            <path d="M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-medium">5,810</span>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-sm hover:text-gray-600 transition-colors">World</a>
+                    <a href="#" class="text-sm hover:text-gray-600 transition-colors">Business</a>
+                    <a href="#" class="text-sm hover:text-gray-600 transition-colors">Lifestyle</a>
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 text-sm">
+                        <button class="px-2 py-1 bg-black text-white rounded transition-colors">EN</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="px-2 py-1 hover:bg-gray-100 rounded transition-colors">বাং</button>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Background Overlay -->
+    <div class="fixed inset-0 bg-black/50 h-screen z-50">
+        <article class="max-w-4xl mx-auto h-screen px-4 pb-8 bg-white text-black rounded-md shadow-lg relative z-50 mt-8 overflow-scroll">
+            <!-- Article Header -->
+            <header class="mb-8 sticky top-0 bg-white z-10 pt-8">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-6">
+                    Turn Your Devices From Distractions Into Time Savers Either
+                </h1>
+
+            </header>
+
+            <!-- Article Image -->
+            <div class="mb-8">
+                <img src="./assets/articles/article-1.jpg" alt="Ferris wheel against sky"
+                    class="w-full h-auto rounded-lg shadow-sm">
+            </div>
+
+            <!-- Article Body -->
+            <div class="prose prose-lg max-w-none">
+                <p class="text-lg leading-relaxed mb-6">
+                    Every January, I usually purge old snail mail, clothes and unwanted knickknacks to start the year
+                    anew. This time, I focused on my digital spaces instead.
+                </p>
+
+                <p class="text-lg leading-relaxed mb-8">
+                    My virtual Marie Kondo-ing forced me to think about the indispensable apps and features on my
+                    devices—and on the flip side, the time thieves that make it hard to leave the couch.
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    Every January, I usually purge old snail mail, clothes and unwanted knickknacks to start the year
+                    anew. This time, I focused on my digital spaces instead.
+                </p>
+
+                <p class="text-lg leading-relaxed mb-8">
+                    My virtual Marie Kondo-ing forced me to think about the indispensable apps and features on my
+                    devices—and on the flip side, the time thieves that make it hard to leave the couch.
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    Every January, I usually purge old snail mail, clothes and unwanted knickknacks to start the year
+                    anew. This time, I focused on my digital spaces instead.
+                </p>
+
+                <p class="text-lg leading-relaxed mb-8">
+                    My virtual Marie Kondo-ing forced me to think about the indispensable apps and features on my
+                    devices—and on the flip side, the time thieves that make it hard to leave the couch.
+                </p>
+                <p class="text-lg leading-relaxed mb-6">
+                    Every January, I usually purge old snail mail, clothes and unwanted knickknacks to start the year
+                    anew. This time, I focused on my digital spaces instead.
+                </p>
+
+                <p class="text-lg leading-relaxed mb-8">
+                    My virtual Marie Kondo-ing forced me to think about the indispensable apps and features on my
+                    devices—and on the flip side, the time thieves that make it hard to leave the couch.
+                </p>
+            </div>
+
+            <!-- Social Actions -->
+            <div class="flex items-center space-x-6 mb-8">
+                <button class="flex items-center space-x-2 text-sm hover:text-gray-600 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                    <span>Share</span>
+                </button>
+
+                <button class="flex items-center space-x-2 text-sm hover:text-gray-600 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                    <span>Bookmark</span>
+                </button>
+
+                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>7 min read</span>
+                </div>
+            </div>
+
+
+        </article>
+    </div>
+
+    <!-- Marquee Banner -->
+    <div class="bg-black text-white py-3 overflow-hidden">
+        <div class="marquee whitespace-nowrap">
+            <span class="text-sm">Breaking News → Climate Summit Reaches Historic Agreement. Tech Giants Announce AI
+                Safety Protocols. Global Markets Show Strong Recovery Signs.</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 overflow-hidden">
+        <!-- Featured Story -->
+        <section class="mb-12">
+            <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <div class="order-2 lg:order-1 p-8">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="px-3 py-1 bg-black text-white text-xs rounded-full">Featured</span>
+                            <span class="text-sm text-gray-600">5 min read</span>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-normal leading-tight mb-4">
+                            The Future of Sustainable Energy: A Global Perspective
+                        </h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            As nations worldwide commit to carbon neutrality, renewable energy sources are becoming the
+                            cornerstone of economic policy. This comprehensive analysis explores the challenges and
+                            opportunities ahead.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-1.png" alt="Sarah Chen">
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">Sarah Chen</p>
+                                    <p class="text-xs text-gray-500">2 hours ago</p>
+                                </div>
+                            </div>
+                            <a href="#" class="text-sm hover:text-gray-600 transition-colors">Read more →</a>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="./assets/images/8400a044-9788-42d9-abe8-6c3c865d36db.png" alt="Sustainable energy"
+                            class="w-full h-64 lg:h-full object-cover">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- News Grid -->
+        <section>
+            <h2 class="text-2xl font-bold mb-8">Latest Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- News Card 1 -->
+                <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                    <img src="./assets/articles/article-1.jpg" alt="Technology news" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Technology</span>
+                            <span class="text-xs text-gray-500">3 min read</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 leading-tight">
+                            AI Revolution Transforms Healthcare Industry
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Machine learning algorithms are now capable of diagnosing diseases with unprecedented
+                            accuracy, revolutionizing patient care worldwide.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-2.png" alt="Sarah Chen">
+                                </div>
+                                <span class="text-xs text-gray-500">Dr. Michael Roberts</span>
+                            </div>
+                            <span class="text-xs text-gray-400">4 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                    <img src="./assets/articles/article-2.jpg" alt="Business news" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Business</span>
+                            <span class="text-xs text-gray-500">4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 leading-tight">
+                            Global Markets React to New Trade Agreements
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            International trade partnerships are reshaping economic landscapes as countries seek to
+                            strengthen post-pandemic recovery efforts.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-1.png" alt="Sarah Chen">
+                                </div>
+                                <span class="text-xs text-gray-500">Emma Thompson</span>
+                            </div>
+                            <span class="text-xs text-gray-400">6 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                    <img src="./assets/articles/article-3.jpg" alt="Environment news" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Environment</span>
+                            <span class="text-xs text-gray-500">6 min read</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 leading-tight">
+                            Ocean Conservation Efforts Show Promising Results
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Marine protected areas are demonstrating significant improvements in biodiversity, offering
+                            hope for ocean ecosystem recovery.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-2.png" alt="Sarah Chen">
+                                </div>
+                                <span class="text-xs text-gray-500">James Wilson</span>
+                            </div>
+                            <span class="text-xs text-gray-400">8 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 4 -->
+                <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                    <img src="./assets/articles/article-4.jpg" alt="Culture news" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Culture</span>
+                            <span class="text-xs text-gray-500">5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 leading-tight">
+                            Digital Art Renaissance Captures Global Attention
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            NFTs and digital galleries are creating new opportunities for artists while challenging
+                            traditional concepts of art ownership.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-1.png" alt="Lisa Park">
+                                </div>
+                                <span class="text-xs text-gray-500">Lisa Park</span>
+                            </div>
+                            <span class="text-xs text-gray-400">10 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 5 -->
+                <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                    <img src="./assets/articles/article-1.jpg" alt="Sports news" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Sports</span>
+                            <span class="text-xs text-gray-500">2 min read</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 leading-tight">
+                            Olympic Preparations Intensify Across Nations
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Athletes worldwide are making final preparations as the upcoming Olympic Games promise to
+                            showcase unprecedented levels of competition.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-2.png" alt="Carlos Rodriguez">
+                                </div>
+                                <span class="text-xs text-gray-500">Carlos Rodriguez</span>
+                            </div>
+                            <span class="text-xs text-gray-400">12 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 6 -->
+                <article class="bg-white rounded-lg shadow-sm overflow-hidden news-card">
+                    <img src="./assets/articles/article-2.jpg" alt="Politics news" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Politics</span>
+                            <span class="text-xs text-gray-500">7 min read</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 leading-tight">
+                            International Summit Addresses Climate Policy
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            World leaders convene to discuss comprehensive strategies for addressing climate change and
+                            implementing sustainable development goals.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-gray-200 rounded-full">
+                                    <img src="./assets/avatar/avatar-1.png" alt="Anna Kowalski">
+                                </div>
+                                <span class="text-xs text-gray-500">Anna Kowalski</span>
+                            </div>
+                            <span class="text-xs text-gray-400">14 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-600">© 2025 <a href="https://learnwithsumit.com/" title="Learn with Sumit"
+                    class="text-gray-600 hover:underline">Learn with Sumit</a>. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
