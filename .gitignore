@@ -7,7 +7,7 @@
 .yarn/install-state.gz
 
 # current dir
-template
+/template
 
 # testing
 /coverage
