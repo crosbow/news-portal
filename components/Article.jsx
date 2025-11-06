@@ -1,5 +1,5 @@
 import extractImage from "@/utils/extractImage";
-import { formateData } from "@/utils/formateData";
+import { formateDate } from "@/utils/formateDate";
 import { trancate } from "@/utils/trancate";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,12 +10,10 @@ const Article = async ({ article }) => {
     title,
     author: authorName,
     description,
-    content,
     image_url,
     category,
     pubDate,
     avatar,
-    comments,
   } = article;
 
   const extractedImageUrl = await extractImage(image_url);
@@ -54,7 +52,7 @@ const Article = async ({ article }) => {
             </div>
             <span className="text-xs text-gray-300">{authorName}</span>
           </div>
-          <span className="text-xs text-gray-100">{formateData(pubDate)}</span>
+          <span className="text-xs text-gray-100">{formateDate(pubDate)}</span>
         </div>
       </div>
     </article>
