@@ -23,13 +23,19 @@ const Article = async ({ article, locale }) => {
   return (
     <article className="bg-zinc-950 rounded-lg shadow-sm overflow-hidden news-card">
       <Link href={`/news/${article_id}`}>
-        <Image
-          src={extractedImageUrl}
-          alt={title}
-          className="w-full h-48 object-cover"
-          height={184}
-          width={200}
-        />
+        {extractedImageUrl ? (
+          <Image
+            src={extractedImageUrl}
+            alt={title}
+            className="w-full h-48 object-cover"
+            height={184}
+            width={200}
+          />
+        ) : (
+          <div className="w-full h-48 object-cover flex justify-center items-center text-2xl">
+            Image not Found
+          </div>
+        )}
       </Link>
       <div className="p-6">
         <div className="flex items-center space-x-2 mb-3">

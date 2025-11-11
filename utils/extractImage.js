@@ -5,8 +5,6 @@ const extractImage = async (imgUrl) => {
 
   const imgResponse = await fetch(imgUrl);
 
-  //   const imgData = await imgResponse.json();
-
-  return imgResponse.url;
+  return !imgResponse.url ? null : imgResponse.url;
 };
 export default extractImage;
