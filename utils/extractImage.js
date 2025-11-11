@@ -3,8 +3,12 @@ const extractImage = async (imgUrl) => {
     return;
   }
 
-  const imgResponse = await fetch(imgUrl);
+  try {
+    const imgResponse = await fetch(imgUrl);
 
-  return !imgResponse.url ? null : imgResponse.url;
+    return !imgResponse.url ? null : imgResponse.url;
+  } catch (error) {
+    return null;
+  }
 };
 export default extractImage;
